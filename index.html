@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drowsiness Detection</title>
+  <script defer src="./face-api.min.js"></script>
+  <script defer src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body id="body">
+  <div class="main">
+    <div>
+      <h1 id="status">Drowsiness Detector</h1>
+      <h4>by <a href="https://smith-dbritto.vercel.app/">Smith D'britto</a></h4>
+      <div class="video-container">
+        <video id="video" width="720" height="560" muted autoplay>Video stream not available.</video>
+      </div>
+      <audio id="alarm-audio" src="sounds\alarm.wav"></audio>
+      <audio id="drowsy-audio" src="sounds\DrowsyTtS.mp3"></audio>
+    </div>
+    <div>
+      <button id="start-button">Start</button>
+    </div>
+  </div>
+</body>
+
+</html>
