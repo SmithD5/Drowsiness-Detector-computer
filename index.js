@@ -1,4 +1,3 @@
-
 const video = document.getElementById("video");
 const startbutton = document.getElementById("start-button");
 
@@ -118,8 +117,13 @@ video.addEventListener("play", () => {
         statusElement.textContent = status
         statusElement.style.backgroundColor = "Orange";
         statusElement.style.border = "Orange";
-        statusElement.style.paddingLeft = "20vw";
         bodyElement.style.backgroundColor = "Orange";
+        if(screen.width>600){
+          statusElement.style.paddingLeft = "20vw";
+        }else{
+          statusElement.style.paddingLeft = "23vw";
+        statusElement.style.paddingRight = "23vw";
+        }
         drowsyAudio.play()
       }
 
@@ -133,8 +137,13 @@ video.addEventListener("play", () => {
         statusElement.textContent = status
         statusElement.style.backgroundColor = "rgb(254, 39, 39)";
         statusElement.style.border = "rgb(254, 39, 39)";
-        statusElement.style.paddingLeft = "20vw";
         bodyElement.style.backgroundColor = "rgb(254, 39, 39)";
+        if(screen.width>600){
+          statusElement.style.paddingLeft = "20vw";
+        }else{
+          statusElement.style.paddingLeft = "19.5vw";
+          statusElement.style.paddingRight = "19.5vw";
+        }
         alarmAudio.play()
       }
 
@@ -149,7 +158,13 @@ video.addEventListener("play", () => {
         statusElement.style.backgroundColor = "greenyellow";
         statusElement.style.border = "greenyellow";
         bodyElement.style.backgroundColor = "greenyellow";
-        statusElement.style.paddingLeft = "20vw";
+        if(screen.width>600){
+          statusElement.style.paddingLeft = "20vw";
+        }else{
+          statusElement.style.paddingLeft = "25vw";
+        statusElement.style.paddingRight = "25vw";
+        }
+        
       }
     }
     const resizedDetection = faceapi.resizeResults(detections, displaySize)
@@ -165,6 +180,10 @@ startbutton.addEventListener("click", () => {
     startVideo()
     run = true;
     startbutton.textContent = "Stop";
+    if(screen.width<=600){
+    startbutton.style.paddingLeft="4vw";
+    startbutton.style.paddingRight="4vw";
+    }
   } else {
     clearInterval(intervalRun);
     video.srcObject = null;
@@ -176,7 +195,13 @@ startbutton.addEventListener("click", () => {
     statusElement.style.backgroundColor = "rgb(47, 227, 255)";
     statusElement.style.border = "rgb(47, 227, 255)";
     bodyElement.style.backgroundColor = "rgb(47, 227, 255)";
-    statusElement.style.paddingLeft = "14vw";
+    if(screen.width>600){
+      statusElement.style.paddingLeft = "14vw";
+    }else{
+      statusElement.style.paddingLeft="6vw";
+      statusElement.style.paddingRight="2vw";
+      statusElement.style.fontSize = "6vw";
+    }
   }
 })
 
