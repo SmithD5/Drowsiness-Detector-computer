@@ -140,7 +140,7 @@ h4>a:hover{
     #video {
         display: flex;
         width:70vw;
-        height: 70vh;
+        height: 60vh;
     
     }
     
@@ -150,7 +150,7 @@ h4>a:hover{
         box-shadow: 1px 1px black;
         border-radius: 5px;
         width:70vw;
-        height: 70vh;
+        height: 60vh;
     }
     
     p {
