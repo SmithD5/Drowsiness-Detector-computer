@@ -111,7 +111,11 @@ video.addEventListener("play", () => {
       sleep = 0;
       drowsy += 1;
       active = 0;
-      if (drowsy > 20) {
+      let value=20
+      if (screen.width<600){
+          value=15
+      }
+      if (drowsy > value) {
         status = "Drowsy";
         console.log(status)
         statusElement.textContent = status
